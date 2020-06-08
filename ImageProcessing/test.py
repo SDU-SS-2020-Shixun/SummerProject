@@ -10,27 +10,32 @@ IMAGE_WIDTH  = 160
 def get_captcha_text_and_image(file_dir):
     filelist = os.listdir(file_dir)
     index = random.randint(0, len(filelist) - 1)
-    filename = filelist[index]
-    file_path = os.path.join(file_dir,filename)
-    img = Image.open(file_path).convert("RGB")
-    img = img.resize((IMAGE_WIDTH, IMAGE_HEIGHT))
-    img = np.array(img)
+    for i in range(0,len(filelist)):
 
-    gray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
+        filename = filelist[i]
+        file_path = os.path.join(file_dir,filename)
+        img = Image.open(file_path).convert("RGB")
+        img = img.resize((IMAGE_WIDTH, IMAGE_HEIGHT))
+        img = np.array(img)
 
-    ret3, th3 = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY +
+        gray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
+
+        ret3, th3 = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY +
                               cv2.THRESH_OTSU)
-    captcha_image = np.array(th3)
-    captch_text = filename.split(".")[0]
-    return captch_text,captcha_image
+        captcha_image = np.array(th3)
+        captch_text = filename.split(".")[0]
+        cv2.imwrite("../yzm_after_process/" + captch_text + ".png", captcha_image)
+    #return captch_text,captcha_image
 
 if __name__ == '__main__':
 
     file_dir = '../yzm'
-    text,image = get_captcha_text_and_image(file_dir)
-    print(text)
-    plt.imshow(image, cmap='Greys_r')
-    plt.show()
+    get_captcha_text_and_image(file_dir)
+    # text,image = get_captcha_text_and_image(file_dir)
+    # print(text)
+    #
+    # plt.imshow(image, cmap='Greys_r')
+    # plt.show()
 
 
 # # 图1
