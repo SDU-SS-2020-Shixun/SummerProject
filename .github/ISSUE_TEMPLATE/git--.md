@@ -1,8 +1,8 @@
 ---
-name: 杂项报告
-about: 这是一个比较难分类的issue
-title: "[misc]"
-labels: ''
+name: git相关
+about: git遇到神妙的问题了，求帮忙
+title: "[Git]"
+labels: git
 assignees: ''
 
 ---

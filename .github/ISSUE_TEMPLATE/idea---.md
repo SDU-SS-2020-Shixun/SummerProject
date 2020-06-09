@@ -2,7 +2,7 @@
 name: Idea 报告
 about: 我有一个好注意，有谁来康康吗？
 title: "[IDEA]"
-labels: idea
+labels: ''
 assignees: ''
 
 ---
