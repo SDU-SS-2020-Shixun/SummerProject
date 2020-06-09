@@ -2,7 +2,7 @@
 name: Bug 报告
 about: 简单朴素的 Bug，有人一起来解决吗？
 title: "[BUG]"
-labels: bug
+labels: ''
 assignees: ''
 
 ---
