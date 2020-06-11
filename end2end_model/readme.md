@@ -25,6 +25,26 @@
 
    ![image-20200611115810725](https://i.loli.net/2020/06/11/UG3KcTekDN5CW1X.png)
 
+2. 调用模型：
+
+   * 首先配置后端接收到的图片的路径，并将文件重命名为 ++++_时间戳.png。(e.g., ++++_123456.png)
+
+   ![image-20200611212310016](https://i.loli.net/2020/06/11/FRhj1zLwnUHamYl.png)
+
+   * 然后即可调用：
+
+   ![image-20200611212118943](https://i.loli.net/2020/06/11/zopOPyeUibRcH5C.png)
+
+3. 为用户随机生成一张验证码：
+
+   * 首先配置希望在后端生成的文件的路径：
+
+   ![image-20200611212939814](https://i.loli.net/2020/06/11/bvOi6PhNVUmQTng.png)
+
+   * 然后即可调用
+
+![image-20200611213132715](https://i.loli.net/2020/06/11/4XPeC6qjoag91JD.png)
+
 
 
 
