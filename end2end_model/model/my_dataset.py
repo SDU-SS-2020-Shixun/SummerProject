@@ -45,6 +45,7 @@ def get_train_data_loader(BATCH_SIZE=64):
 def get_test_data_loader():
     dataset = mydataset(gen_config.TEST_DATASET_PATH, transform=transform)
     return DataLoader(dataset, batch_size=1, shuffle=True)
+    
 
 def get_predict_data_loader():
     dataset = mydataset(gen_config.PREDICT_DATASET_PATH, transform=transform)
