@@ -6,18 +6,23 @@ from django.http import HttpResponse
 from django.conf import settings
 
 from PIL import Image
+import sys
 import os
 import json
 import time
+import torch
+
+sys.path.append("/SummerProject/end2end_model")
+
+from end2end_model.model import invoke_the_model
 
 
 def upload(request):
     if request.method == 'POST':
         img = request.FILES.get("img")
         imgPath = saveImg(img)
-        return HttpResponse(imgPath)
         # 调用图形处理接口获取结果
-        imgCode = ""
+        imgCode = invoke_the_model.end2end_recognition("")
         result = {
             "code": 200,
             "imgCode": imgCode
@@ -46,7 +51,7 @@ def saveImg(img):
     # 获取文件名
     name = os.path.splitext(imgName)[0]
     imgName = name + "_" + str(time.time()) + ".png"
-    imgPath = "media/"+imgName
+    imgPath = "media/" + imgName
     img.save(imgPath)
     # imgPath = os.path.join(settings.MEDIA_ROOT, imgName)
     # 写入 上传图片的 内容
