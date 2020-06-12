@@ -12,7 +12,8 @@ import json
 import time
 import torch
 
-sys.path.append("/SummerProject/end2end_model")
+# 修改文件导入路径
+sys.path.append("../back_end/imgProcess")
 
 from end2end_model.model import invoke_the_model
 
