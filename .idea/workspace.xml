@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:upstream" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="96724627-2fb5-4fa5-a62c-b410acbc2629" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/back_end/imgProcess/end2end_model/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back_end/imgProcess/end2end_model/assets/image-20200611115810725.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back_end/imgProcess/end2end_model/assets/image-20200611115810789.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back_end/imgProcess/end2end_model/assets/image-20200611133649815.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back_end/imgProcess/end2end_model/assets/image-20200611212118943.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back_end/imgProcess/end2end_model/assets/image-20200611212310016.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back_end/imgProcess/end2end_model/assets/image-20200611212939814.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back_end/imgProcess/end2end_model/assets/image-20200611213132715.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back_end/imgProcess/end2end_model/imageProcess/000a.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back_end/imgProcess/end2end_model/imageProcess/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back_end/imgProcess/end2end_model/imageProcess/toGrayscale.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back_end/imgProcess/end2end_model/model.pkl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back_end/imgProcess/end2end_model/model/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back_end/imgProcess/end2end_model/model/cnn_model_v1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back_end/imgProcess/end2end_model/model/invoke_the_model.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back_end/imgProcess/end2end_model/model/my_dataset.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back_end/imgProcess/end2end_model/model/test4nothing.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back_end/imgProcess/end2end_model/model/testing2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back_end/imgProcess/end2end_model/model/training.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back_end/imgProcess/end2end_model/model/training2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back_end/imgProcess/end2end_model/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back_end/imgProcess/end2end_model/ref1/train.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back_end/imgProcess/end2end_model/training_set_gen/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back_end/imgProcess/end2end_model/training_set_gen/gen.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back_end/imgProcess/end2end_model/training_set_gen/gen_config.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back_end/imgProcess/end2end_model/training_set_gen/gen_for_user.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back_end/imgProcess/end2end_model/training_set_gen/one_hot_encoding.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back_end/imgProcess/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/back_end/imgProcess/views.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="/Library/apache-maven-3.6.3" />
+        <option name="userSettingsFile" value="/Library/apache-maven-3.6.3/conf/settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1dDHdeCNbNMy809CyatqtLlPSYd" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/back_end/imgProcess" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/back_end/imgProcess" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="96724627-2fb5-4fa5-a62c-b410acbc2629" name="Default Changelist" comment="" />
+      <created>1591952831649</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1591952831649</updated>
+      <workItem from="1591952833832" duration="944000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="208" y="31" key="#Project_Structure" timestamp="1591953034969">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="208" y="31" key="#Project_Structure/0.0.1440.900@0.0.1440.900" timestamp="1591953034969" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1591953720615">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1591953720615" />
+  </component>
+</project>
