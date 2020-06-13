@@ -25,4 +25,4 @@ TEST_DATASET_PATH = "."+os.path.sep+'dataset' + os.path.sep + 'test'
 # PREDICT_DATASET_PATH = CUR_PATH+'img/img_to_predict' # 在生产环境中，配置后端接收的要预测的图片的路径
 PREDICT_DATASET_PATH='../back_end/'+'media'
 
-DEMONSTRATION_PATH='' # 生产环境中，配置需要为用户生成的验证码的路径
+DEMONSTRATION_PATH='../back_end/'+'media' # 生产环境中，配置需要为用户生成的验证码的路径
