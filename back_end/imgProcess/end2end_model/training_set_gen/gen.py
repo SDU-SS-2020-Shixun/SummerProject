@@ -1,9 +1,15 @@
 # -*- coding: UTF-8 -*-
 from captcha.image import ImageCaptcha  # pip install captcha
+import sys
+# 修改文件导入路径
+
+CUR_PATH='../back_end/imgProcess'
+sys.path.append('../back_end/imgProcess/')
+import time
+from end2end_model.training_set_gen import gen_config
 from PIL import Image
 import random
 import time
-import gen_config
 import os
 from tqdm import tqdm as td
 
