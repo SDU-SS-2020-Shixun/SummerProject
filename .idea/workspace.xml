@@ -15,44 +15,18 @@
         <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:upstream" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
     </expand>
     <select />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="96724627-2fb5-4fa5-a62c-b410acbc2629" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/back_end/imgProcess/end2end_model/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back_end/imgProcess/end2end_model/assets/image-20200611115810725.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back_end/imgProcess/end2end_model/assets/image-20200611115810789.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back_end/imgProcess/end2end_model/assets/image-20200611133649815.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back_end/imgProcess/end2end_model/assets/image-20200611212118943.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back_end/imgProcess/end2end_model/assets/image-20200611212310016.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back_end/imgProcess/end2end_model/assets/image-20200611212939814.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back_end/imgProcess/end2end_model/assets/image-20200611213132715.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back_end/imgProcess/end2end_model/imageProcess/000a.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back_end/imgProcess/end2end_model/imageProcess/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back_end/imgProcess/end2end_model/imageProcess/toGrayscale.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back_end/imgProcess/end2end_model/model.pkl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back_end/imgProcess/end2end_model/model/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back_end/imgProcess/end2end_model/model/cnn_model_v1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back_end/imgProcess/end2end_model/model/invoke_the_model.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back_end/imgProcess/end2end_model/model/my_dataset.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back_end/imgProcess/end2end_model/model/test4nothing.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back_end/imgProcess/end2end_model/model/testing2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back_end/imgProcess/end2end_model/model/training.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back_end/imgProcess/end2end_model/model/training2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back_end/imgProcess/end2end_model/readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back_end/imgProcess/end2end_model/ref1/train.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back_end/imgProcess/end2end_model/training_set_gen/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back_end/imgProcess/end2end_model/training_set_gen/gen.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back_end/imgProcess/end2end_model/training_set_gen/gen_config.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back_end/imgProcess/end2end_model/training_set_gen/gen_for_user.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back_end/imgProcess/end2end_model/training_set_gen/one_hot_encoding.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back_end/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/back_end/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back_end/imgProcess/end2end_model/model/invoke_the_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/back_end/imgProcess/end2end_model/model/invoke_the_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back_end/imgProcess/end2end_model/training_set_gen/gen.py" beforeDir="false" afterPath="$PROJECT_DIR$/back_end/imgProcess/end2end_model/training_set_gen/gen.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back_end/imgProcess/end2end_model/training_set_gen/gen_config.py" beforeDir="false" afterPath="$PROJECT_DIR$/back_end/imgProcess/end2end_model/training_set_gen/gen_config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back_end/imgProcess/end2end_model/training_set_gen/gen_for_user.py" beforeDir="false" afterPath="$PROJECT_DIR$/back_end/imgProcess/end2end_model/training_set_gen/gen_for_user.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/back_end/imgProcess/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/back_end/imgProcess/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back_end/media/0000_1592007776.2208726.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,6 +92,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="208" y="31" key="#Project_Structure" timestamp="1591953034969">
