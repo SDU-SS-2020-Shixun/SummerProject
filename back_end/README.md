@@ -7,7 +7,7 @@
 请求参数：[
 
     "img":用户上传的图片
-    
+
 ]
 
 返回参数：[
@@ -31,5 +31,12 @@
     "img":图片路径，为相对路径
     
     "imgCode":验证码结果
-    
+
 ]
+
+
+
+## 后端目录
+
+1. imgProcess 下的 end2end_model 是端到端的识别模型
+2. imgProcess 下的segmentation_model是分割后识别的模型
