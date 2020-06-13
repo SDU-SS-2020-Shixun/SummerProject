@@ -3,8 +3,9 @@ import torch.nn as nn
 from torch.autograd import Variable
 import sys
 # 修改文件导入路径
-sys.path.append('../back_end/imgProcess')
-import end2end_model.model.my_dataset
+CUR_PATH='../back_end/imgProcess'
+sys.path.append('../back_end/imgProcess/')
+import end2end_model.model.my_dataset as my_dataset
 from end2end_model.model.cnn_model_v1 import CNN_v1
 import sys
 from tqdm import tqdm
@@ -17,7 +18,7 @@ import os
 import torch.nn as nn
 from end2end_model.training_set_gen import gen_config
 from end2end_model.training_set_gen import one_hot_encoding 
-from end2end_model.imageProcess import toGrayscale
+# from end2end_model.imageProcess import toGrayscale
 
 DEVICE = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 print('using device:',DEVICE)
@@ -29,7 +30,7 @@ return: str,图片的4位识别结果
 def end2end_recognition(image_path):
     cnn = CNN_v1()
     cnn.eval()
-    cnn.load_state_dict(torch.load('model.pkl'))
+    cnn.load_state_dict(torch.load(CUR_PATH+'/end2end_model/model.pkl'))
     print('加载CNN_V1模型')
     predict_dataloader = my_dataset.get_predict_data_loader()
     res=''
