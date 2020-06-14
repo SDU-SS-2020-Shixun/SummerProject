@@ -44,7 +44,7 @@ function changetip() {
 function gores(){
 	var formData = new FormData();
 	$.ajax({
-		url: "http://127.0.0.1:8000/imgProcess/upload"
+	    url: "/imgProcess/createImg",
 	    type: "post",
 	    data: formData,
 	    dataType: "json",

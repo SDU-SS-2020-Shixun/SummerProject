@@ -3,7 +3,7 @@ function uploadFile() {
 	var file = document.getElementById('file').files[0];
 	formData.append("img", file);
 	$.ajax({
-	    url: "./jsondir/upload.json",
+	    url: "http://127.0.0.1:8000/imgProcess/upload",
 	    type: "post",
 	    data: formData,
 	    dataType: "json",
@@ -43,8 +43,9 @@ function changetip() {
 }
 function gores(){
 	var formData = new FormData();
+	var parpath="../media/";
 	$.ajax({
-		url: "http://127.0.0.1:8000/imgProcess/upload"
+		url: "http://127.0.0.1:8000/imgProcess/createImg"
 	    type: "post",
 	    data: formData,
 	    dataType: "json",
@@ -53,7 +54,7 @@ function gores(){
 	    contentType: false, 
 		success: function (data) {
 			if(data.code==200)
-				$("#resimg").attr("src",data.img);
+				$("#resimg").attr("src",parpath+data.img);
 				$("#resar").text(data.imgCode1);
 				$("#resbr").text(data.imgCode2);
 				$("#resar").css("display","block");
