@@ -6,6 +6,7 @@ function uploadFile() {
 	    url: "http://127.0.0.1:8000/imgProcess/upload",
 	    type: "post",
 	    data: formData,
+		dataType: "json",
 	    cache: false,
 	    processData: false,
 	    contentType: false,
@@ -17,8 +18,6 @@ function uploadFile() {
                 $("#resbr").css("display","block");
                 $("#resar").css("opacity","1");
                 $("#resbr").css("opacity","1");
-                $("#resar").css("top","15%");
-                $("#resbr").css("top","50%");
             }
 			else
 				alert("分析失败！");
@@ -63,8 +62,6 @@ function gores(){
                 $("#resbl").css("display","block");
                 $("#resal").css("opacity","1");
                 $("#resbl").css("opacity","1");
-                $("#resal").css("top","15%");
-                $("#resbl").css("top","50%");
             }
 			else
 				alert("分析失败！");
