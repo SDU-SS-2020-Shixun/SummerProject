@@ -9,17 +9,18 @@ function uploadFile() {
 	    dataType: "json",
 	    cache: false,
 	    processData: false,
-	    contentType: false, 
+	    contentType: false,
 	    success: function (data) {
-			if(data.code==200)
-				$("#resal").text(data.imgCode1);
-				$("#resbl").text(data.imgCode2);
-				$("#resal").css("display","block");
-				$("#resbl").css("display","block");
-				$("#resal").css("opacity","1");
-				$("#resbl").css("opacity","1");
-				$("#resal").css("top","15%");
-				$("#resbl").css("top","50%");
+			if(data.code==200){
+                $("#resal").text(data.imgCode1);
+                $("#resbl").text(data.imgCode2);
+                $("#resal").css("display","block");
+                $("#resbl").css("display","block");
+                $("#resal").css("opacity","1");
+                $("#resbl").css("opacity","1");
+                $("#resal").css("top","15%");
+                $("#resbl").css("top","50%");
+            }
 			else
 				alert("分析失败！");
 	    },
@@ -45,24 +46,28 @@ function gores(){
 	var formData = new FormData();
 	var parpath="../media/";
 	$.ajax({
-		url: "http://127.0.0.1:8000/imgProcess/createImg"
+		url: "http://127.0.0.1:8000/imgProcess/createImg",
 	    type: "post",
 	    data: formData,
 	    dataType: "json",
 	    cache: false,
 	    processData: false,
-	    contentType: false, 
-		success: function (data) {
-			if(data.code==200)
-				$("#resimg").attr("src",parpath+data.img);
-				$("#resar").text(data.imgCode1);
-				$("#resbr").text(data.imgCode2);
-				$("#resar").css("display","block");
-				$("#resbr").css("display","block");
-				$("#resar").css("opacity","1");
-				$("#resbr").css("opacity","1");
-				$("#resar").css("top","15%");
-				$("#resbr").css("top","50%");
+	    contentType: false,
+		success: function (datas) {
+			data = eval(datas)
+			console.log(data)
+			if(data.code==200){
+                $("#resimg").attr("src",parpath+data.img);
+                $("#resar").text(data.imgCode1);
+                $("#resbr").text(data.imgCode2);
+                $("#resar").css("display","block");
+                $("#resbr").css("display","block");
+                $("#resar").css("opacity","1");
+                $("#resbr").css("opacity","1");
+                $("#resar").css("top","15%");
+                $("#resbr").css("top","50%");
+            }
+
 			else
 				alert("分析失败！");
 		},
