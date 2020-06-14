@@ -1,0 +1,26 @@
+<annotation>
+	<folder>yzm_after_processed</folder>
+	<filename>b9i7.png</filename>
+	<path>/Users/arkham/Desktop/yzm_after_processed/b9i7.png</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>160</width>
+		<height>60</height>
+		<depth>1</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>b</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>11</xmin>
+			<ymin>5</ymin>
+			<xmax>42</xmax>
+			<ymax>47</ymax>
+		</bndbox>
+	</object>
+</annotation>
