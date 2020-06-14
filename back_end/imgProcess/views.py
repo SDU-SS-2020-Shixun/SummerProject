@@ -7,8 +7,9 @@ from django.conf import settings
 
 import sys
 import os
-sys.path.append('.'+os.path.sep+'imgProcess'+os.path.sep)
-CUR_PATH='../back_end/imgProcess'
+
+sys.path.append('.' + os.path.sep + 'imgProcess' + os.path.sep)
+CUR_PATH = '../back_end/imgProcess'
 # print(os.path.abspath(__file__))
 print(os.getcwd())
 
@@ -21,6 +22,9 @@ import time
 # from back_end import imgProcess
 
 from end2end_model.model import invoke_the_model
+from end2end_model.training_set_gen import gen_for_user
+
+
 # 设置导包路径
 # sys.path.append('../back_end/imgProcess')
 
@@ -28,28 +32,42 @@ from end2end_model.model import invoke_the_model
 def upload(request):
     if request.method == 'POST':
         img = request.FILES.get("img")
+        # 保存前首先清空当前文件夹下的所有图片
+        del_file('media/')
         imgPath = saveImg(img)
-        # 调用图形处理接口获取结果
-        imgCode = invoke_the_model.end2end_recognition("")
+        # 调用第一种方式获取验证码，调用图形处理接口获取结果
+        imgCode1 = invoke_the_model.end2end_recognition("")
+        # 调用第二种识别方法获取验证码
+        imgCode2 = ""
+
         result = {
             "code": 200,
-            "imgCode": imgCode
+            "imgCode1": imgCode1,
+            "imgCode2": imgCode2
         }
         return HttpResponse(json.dumps(result))
     else:
-        return HttpResponse(json.dumps({"code": 400, "imgCode": "request method not valid"}))
+        return HttpResponse(json.dumps({"code": 400}))
 
 
 def createImg(request):
+    # 清除文件夹下的图片
+    del_file('media/')
     # 调用方法获取图片路径，直接返回给前端
-    imgPath = None
-    imgCode = ""
+    imgPath = gen_for_user.gen_1_image()
+    # 根据路径获取到图片文件名，前端根据文件名进行展示
+    imgFile = imgPath.split("/")[-1]
+    # imgCode1 = invoke_the_model.end2end_recognition("")
+    imgCode1 = "ggha"
+    imgCode2 = "ggha"
     result = {
         "code": 200,
-        "img": imgPath,
-        "imgCode": imgCode
+        "img": imgFile,
+        "imgCode1": imgCode1,
+        "imgCode2": imgCode2
     }
     return HttpResponse(json.dumps(result))
+
 
 def del_file(filepath):
     """
@@ -68,17 +86,13 @@ def del_file(filepath):
 
 # 存储图片到本地，并返回图片路径
 def saveImg(img):
-    # 保存前首先清空当前文件夹下的所有图片
-    del_file('media/')
-
-
     imgName = img.name
     img = Image.open(img)
     # 获取文件名
     name = os.path.splitext(imgName)[0]
     # imgName = name + "_" + str(time.time()) + ".png" 
     # 接受到用户上传的图片后，重命名为 '0000_时间戳.png'
-    imgName='0000_'+ str(time.time())  + ".png"
+    imgName = '0000_' + str(time.time()) + ".png"
     imgPath = "media/" + imgName
     img.save(imgPath)
     return imgPath
