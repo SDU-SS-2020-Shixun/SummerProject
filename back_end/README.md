@@ -6,19 +6,30 @@
 
 请求参数：[
 
-    "img":用户上传的图片
+    "img": 用户上传的图片
     
-    "type":用户决定使用识别的类型，1表示灿哲的，2表示郭奕的
-
 ]
 
 返回参数：[
     
-    "code":200,结果成功；400,结果失败
+    "code": 200,结果成功；400,结果失败
     
-    "imgCode":验证码识别结果，str类型
+    "imgCode1": 验证码识别结果，str类型，灿哲的识别结果
+    
+    "imgCode2": 验证码识别结果，str类型，郭奕的识别结果
 
 ]
+
+返回示例：
+
+成功返回
+
+![binaryTree](./READMEIMG/successUpload.png "binaryTree")
+失败返回
+
+![binaryTree](./READMEIMG/failUpload.png "binaryTree")
+
+结果展示：
 
 2. /imgProcess/createImg
 
@@ -28,17 +39,26 @@
 
 返回参数：[
 
-    "code":200
+    "code": 200
     
-    "img":图片路径，为相对路径
+    "img": 图片文件名
     
-    "imgCode":验证码结果
+    "imgCode1": 验证码结果，灿哲的结果
+    
+    "imgCode2": 验证码结果，郭奕的结果
 
 ]
 
+返回示例：
 
+![binaryTree](./READMEIMG/createImg.png "binaryTree")
+
+
+结果展示：
+
+![binaryTree](./READMEIMG/createImgResult.jpg "binaryTree")
 
 ## 后端目录
 
 1. imgProcess 下的 end2end_model 是端到端的识别模型
-2. imgProcess 下的segmentation_model是分割后识别的模型
+2. imgProcess 下的 segmentation_model 是分割后识别的模型
