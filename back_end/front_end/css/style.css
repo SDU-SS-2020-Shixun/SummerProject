@@ -325,8 +325,8 @@ html,body{
 	margin: 0;
 	padding: 0;
 	left: 35%;
-	top: 25%;
-	font-size: 45px;
+	top: 15%;
+	font-size: 100px;
 	font-weight: 500;
 	color: #95a5a6;
 	opacity: 0;
@@ -337,12 +337,12 @@ html,body{
 	-o-transition:all 1s; /* Opera */
 }
 #resbl{
-	position: absolute;
+position: absolute;
 	margin: 0;
 	padding: 0;
 	left: 35%;
-	top: 60%;
-	font-size: 45px;
+	top: 50%;
+	font-size: 100px;
 	font-weight: 500;
 	color: #FAB1A0;
 	opacity: 0;
@@ -390,8 +390,8 @@ html,body{
 	margin: 0;
 	padding: 0;
 	left: 35%;
-	top: 25%;
-	font-size: 45px;
+	top: 15%;
+	font-size: 100px;
 	font-weight: 500;
 	color: #95a5a6;
 	opacity: 0;
@@ -406,8 +406,8 @@ html,body{
 	margin: 0;
 	padding: 0;
 	left: 35%;
-	top: 60%;
-	font-size: 45px;
+	top: 50%;
+	font-size: 100px;
 	font-weight: 500;
 	color: #FAB1A0;
 	opacity: 0;
