@@ -18,7 +18,7 @@
 					<div id="left_title">在线生成</div>
 					<button id="left_btn" onclick="leftchange()">CLICK HERE</button>
 					
-					<form id="form" onsubmit="uploadFile()" method="post" enctype="multipart/form-data">
+					<form id="form" method="post" enctype="multipart/form-data">
 					    <div class="shadow" id="shadowl">
 					        <div class="dot">
 					            <div class="fake">点击选择验证码图片
@@ -27,7 +27,7 @@
 					            <h2 id="tip" class="tip">未选择</h2>
 					        </div>
 					    </div>
-					    <button class="submit" id="submitl">开始上传</button>
+					    <button class="submit" id="submitl" onclick="uploadFile()" type="button">开始上传</button>
 					</form>
 					
 					<div id="planal">PLAN 1:</div>
