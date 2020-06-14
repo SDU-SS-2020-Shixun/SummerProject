@@ -3,7 +3,7 @@ function uploadFile() {
 	var file = document.getElementById('file').files[0];
 	formData.append("img", file);
 	$.ajax({
-	    url: "/imgProcess/upload",
+	    url: "./jsondir/upload.json",
 	    type: "post",
 	    data: formData,
 	    dataType: "json",
@@ -12,10 +12,28 @@ function uploadFile() {
 	    contentType: false, 
 	    success: function (data) {
 			if(data.code==200)
-				alert(data.imgCode);
+				$("#resal").text(data.imgCode1);
+				$("#resbl").text(data.imgCode2);
+				$("#resal").css("display","block");
+				$("#resbl").css("display","block");
+				$("#resal").css("opacity","1");
+				$("#resbl").css("opacity","1");
+				$("#resal").css("top","15%");
+				$("#resbl").css("top","50%");
 			else
-				alet("分析失败！");
-	    }
+				alert("分析失败！");
+	    },
+		error:function(err){
+			alert("请求失败！")
+		},
+		beforeSend:function(){
+			$("#shadowl").addClass("notclick");
+			$("#submitl").addClass("notclick");
+		},
+		complete:function(){
+			$("#shadowl").removeClass("notclick");
+			$("#submitl").removeClass("notclick");
+		}
 	});
 }
 function changetip() {
@@ -23,24 +41,41 @@ function changetip() {
 	var tip = document.getElementById('tip');
 	tip.innerHTML = fileInput.value;
 }
-var timgCode;
 function gores(){
 	var formData = new FormData();
 	$.ajax({
-	    url: "/imgProcess/createImg",
+		url: "http://127.0.0.1:8000/imgProcess/upload"
 	    type: "post",
 	    data: formData,
 	    dataType: "json",
 	    cache: false,
 	    processData: false,
 	    contentType: false, 
-	    success: function (data) {
+		success: function (data) {
 			if(data.code==200)
-				$("#myyzm").attr("src",data.img);
-				timgCode=data.imgCode;
+				$("#resimg").attr("src",data.img);
+				$("#resar").text(data.imgCode1);
+				$("#resbr").text(data.imgCode2);
+				$("#resar").css("display","block");
+				$("#resbr").css("display","block");
+				$("#resar").css("opacity","1");
+				$("#resbr").css("opacity","1");
+				$("#resar").css("top","15%");
+				$("#resbr").css("top","50%");
 			else
-				alet("生成失败！");
-	    }
+				alert("分析失败！");
+		},
+		error:function(err){
+			alert("请求失败！")
+		},
+		beforeSend:function(){
+			$("#shadowl").addClass("notclick");
+			$("#submitl").addClass("notclick");
+		},
+		complete:function(){
+			$("#shadowl").removeClass("notclick");
+			$("#submitl").removeClass("notclick");
+		}
 	});
 }
 function work() {
