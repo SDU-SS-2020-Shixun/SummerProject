@@ -97,4 +97,3 @@ def captcha_predict(file_path):
                 code = code + str_temp
     return code
 
-

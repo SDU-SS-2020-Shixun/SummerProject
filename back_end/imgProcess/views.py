@@ -23,7 +23,7 @@ import time
 
 from end2end_model.model import invoke_the_model
 from end2end_model.training_set_gen import gen_for_user
-
+from sr_model import ocr
 
 # 设置导包路径
 # sys.path.append('../back_end/imgProcess')
@@ -37,8 +37,9 @@ def upload(request):
         imgPath = saveImg(img)
         # 调用第一种方式获取验证码，调用图形处理接口获取结果
         imgCode1 = invoke_the_model.end2end_recognition("")
+        # imgCode1 = ""
         # 调用第二种识别方法获取验证码
-        imgCode2 = ""
+        imgCode2 = ocr.captcha_predict(imgPath)
 
         result = {
             "code": 200,
@@ -57,9 +58,9 @@ def createImg(request):
     imgPath = gen_for_user.gen_1_image()
     # 根据路径获取到图片文件名，前端根据文件名进行展示
     imgFile = imgPath.split("/")[-1]
-    # imgCode1 = invoke_the_model.end2end_recognition("")
-    imgCode1 = "ggha"
-    imgCode2 = "ggha"
+    imgCode1 = invoke_the_model.end2end_recognition("")
+    # imgCode1 = "ggha"
+    imgCode2 = ocr.captcha_predict("media/"+imgFile)
     result = {
         "code": 200,
         "img": imgFile,
