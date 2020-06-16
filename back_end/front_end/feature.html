@@ -5,16 +5,6 @@
 		<link href="./css/style.css" rel="stylesheet" />
 		<title>暑期实训验证码识别</title>
 		<link rel="icon" href="img/logo.ico" type="images/x-ico" />
-		<script src="./js/echarts.min.js"></script>
-		<script src="./js/data.js"></script>
-		<style type="text/css">
-			a:link{color:#FAFAD2;}
-			a:visited{color:#40E0D0;}
-			a:hover{color:pink;}
-			a:active{color:#ccc;}
-			#intro1{color: #EEE8AA;
-			font-size: 22px;}
-		</style>
 		
 	</head>
 	<body>
@@ -29,86 +19,21 @@
 					  <p id="intro1">
 						&nbsp; &nbsp; 全自动区分计算机和人类的公开图灵测试（CAPTCHA），俗称验证码，是一种区分用户是计算机或人的公共全自动程序。详情见
 						<a href="https://zh.wikipedia.org/wiki/%E9%AA%8C%E8%AF%81%E7%A0%81" target="_blank">wiki</a>
-						。这里有一个例子<br><br>
-						<img src="img/QQ截图20200615182158.png">
 					  </p>
-					  <p id="intro1">
-						&nbsp; &nbsp; 调查显示人们花费在识别验证码的时间是这样的。
-					  </p>
-					  <div id="usage" style="width: 300px;height:200px;"></div>
-					  <script type="text/javascript">
-						// 基于准备好的dom，初始化echarts实例
-						var myChart = echarts.init(document.getElementById('usage'));
-				 
-						// 指定图表的配置项和数据
-						var option = {
-		title: {
-			text: '平均消除验证码时间(s)'
-		},
-		color: ['#3398DB'],
-		tooltip: {
-			trigger: 'axis',
-			axisPointer: {            // 坐标轴指示器，坐标轴触发有效
-				type: 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
-			}
-		},
-		grid: {
-			left: '3%',
-			right: '4%',
-			bottom: '3%',
-			containLabel: true
-		},
-		xAxis: [
-			{
-				type: 'category',
-				data: ['每天上网', '每周上网', '每月上网'],
-				axisTick: {
-					alignWithLabel: true
-				}
-			}
-		],
-		yAxis: [
-			{
-				type: 'value'
-			}
-		],
-		series: [
-			{
-				name: '直接访问',
-				type: 'bar',
-				barWidth: '60%',
-				data: [8.3, 12.7, 10.5]
-			}
-		]
-	};
-				 
-						// 使用刚指定的配置项和数据显示图表。
-						myChart.setOption(option);
-					</script>
 
 					
 				</div>
 				<div id="in_two_right">
 					<p id="intro1">
-						&nbsp; &nbsp; 本网站通过深度学习的方式识别验证码和光学字符识别两种方式识别，请仅用于学习用途。您可以在
-						<a href="https://github.com/SDU-SS-2020-Shixun/SummerProject" target="_blank">Github</a>上查看项目。
-						阅读
-						<a href="mianze.htm" target="_blank">免责声明</a>
+						&nbsp; &nbsp; 本网站通过深度学习的方式识别验证码，而不是光学字符识别，请仅用于学习用途。阅读
+						<a  href="https://www.ibw.cn/mianze.htm" target="_blank">免责声明</a>
 					  </p>
 					  
 					  <p id="intro1">
 						&nbsp; &nbsp; 欧码云平台的上传验证码识别完全免费，用户既可以上传识别，也可以由系统自动生成之。
 					  </p>
 					  <p id="intro1">
-						&nbsp; &nbsp; 根据
-						<a href="https://www.nvidia.cn/docs/IO/123003/CUDA_contest_Captcha_problem.pdf" target="_blank">论文</a>
-						，在中等难度的CAPTCHA 字符集上，
-						<a href="https://zh.wikipedia.org/wiki/%E6%94%AF%E6%8C%81%E5%90%91%E9%87%8F%E6%9C%BA" target="_blank">SVM</a>
-						能够实现9%的识别率，而
-						<a href="https://numenta.com/assets/pdf/whitepapers/hierarchical-temporal-memory-cortical-learning-algorithm-0.2.1-en.pdf" target="_blank">HTM</a>能够做到20%，所以识别过程中出现错误是很正常的。
-					  </p>
-					  <p id="intro1">
-						&nbsp; &nbsp; 希望您在发现验证码错误时，能把正确的结果输入进去，这对我们改善模型有帮助。
+						&nbsp; &nbsp; 由于模型的识别准确率不是100%，所以希望您在发现验证码错误时，能把正确的结果输入进去，这对我们改善模型有帮助。
 					  </p>
 				</div>
 				<div id="startone"></div>
