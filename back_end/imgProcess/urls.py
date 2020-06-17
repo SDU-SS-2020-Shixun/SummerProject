@@ -8,4 +8,5 @@ from . import views
 urlpatterns = [
     path('upload', views.upload, name='upload'),
     path('createImg', views.createImg, name='createImg'),
+    path('index', views.index, name='index')
 ]

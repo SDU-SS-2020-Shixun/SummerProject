@@ -4,6 +4,7 @@ from django.shortcuts import render
 
 from django.http import HttpResponse
 from django.conf import settings
+from django.shortcuts import render
 
 import sys
 import os
@@ -28,6 +29,8 @@ from sr_model import ocr
 # 设置导包路径
 # sys.path.append('../back_end/imgProcess')
 
+def index(request):
+    return render(request, "front_end/index.html")
 
 def upload(request):
     if request.method == 'POST':
