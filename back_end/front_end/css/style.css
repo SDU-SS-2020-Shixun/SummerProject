@@ -60,6 +60,7 @@ html,body{
 	-webkit-transition:all 1s; /* Safari and Chrome */
 	-o-transition:all 1s; /* Opera */
 }
+
 #cn-title1{
 	padding: 0;
 	margin: 0;
@@ -95,7 +96,6 @@ html,body{
 	-webkit-transition:all 1s; /* Safari and Chrome */
 	-o-transition:all 1s; /* Opera */
 }
-
 
 #two_block{
  	height: 80%;
@@ -226,6 +226,7 @@ html,body{
 #right_btn:hover{
 	font-weight: 600;
 }
+
 #intro1 {
 	color: antiquewhite;
 	font-size: 1.5rem;
@@ -460,8 +461,34 @@ position: absolute;
 	-o-transition:all 1s; /* Opera */
 }
 
-
-
+#hxian{
+	width: 40%;
+	height: 25%;
+	position: absolute;
+	left: 30%;
+	top: 24%;
+	margin: 0;
+	padding: 0;
+	background-position: center center;
+	background-repeat: no-repeat;
+	display: none;
+}
+#hximg{
+	margin: 0;
+	padding: 0;
+}
+#tix{
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	left: 27%;
+	top: 49%;
+	width: 50%;
+	height: 10%;
+	line-height: 1.25rem;
+	text-align: center;
+	color: #CCCCCC;
+}
 
 .notclick{
   pointer-events: none;

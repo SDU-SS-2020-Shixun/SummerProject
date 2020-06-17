@@ -1,7 +1,8 @@
+var fil;
 function uploadFile() {
 	var formData = new FormData();
-	var file = document.getElementById('file').files[0];
-	formData.append("img", file);
+	fil = document.getElementById('file').files[0];
+	formData.append("img", fil);
 	$.ajax({
 	    url: "http://127.0.0.1:8000/imgProcess/upload",
 	    type: "post",
@@ -35,14 +36,9 @@ function uploadFile() {
 		}
 	});
 }
-function changetip() {
-	var fileInput = document.getElementById('file');
-	var tip = document.getElementById('tip');
-	tip.innerHTML = fileInput.value;
-}
 function gores(){
 	var formData = new FormData();
-	var parpath="../media/";
+	var parpath="../front_end/img/";
 	$.ajax({
 		url: "http://127.0.0.1:8000/imgProcess/createImg",
 	    type: "post",
@@ -79,8 +75,33 @@ function gores(){
 		}
 	});
 }
-function work() {
-	alert(timgCode);
-}
+window.onload = function(){  
+     var uuz = document.getElementById('shadowl');  
+     uuz.ondragenter = function(e){  
+         e.preventDefault();  
+     }  
+
+     uuz.ondragover = function(e){  
+         e.preventDefault();  
+    }  
+
+     uuz.ondragleave = function(e){  
+         e.preventDefault();  
+     }  
+     uuz.ondrop = function(e){  
+         e.preventDefault();  
+         fil = e.dataTransfer.files[0]; //获取要上传的文件对象(可以上传多个)  
+		 var fr = new FileReader();
+		 fr.readAsDataURL(fil);
+		 fr.onload=function(e){
+		 	console.log(this.result);
+		 	$("#hxian").css("display","block");
+		 	$("#hximg").attr("src",e.target.result);
+		 	$(".fake").css("display","none");
+			$("#tix").css("display","none");
+		 	// $("#hxian").css("background-image","url(this.result)");
+		 }
+     }
+ }
 
 
