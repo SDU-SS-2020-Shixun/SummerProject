@@ -4,7 +4,7 @@ function uploadFile() {
 	fil = document.getElementById('file').files[0];
 	formData.append("img", fil);
 	$.ajax({
-	    url: "http://127.0.0.1:8000/imgProcess/upload",
+		url: "http://"+window.location.host+"/imgProcess/upload",
 	    type: "post",
 	    data: formData,
 		dataType: "json",
@@ -38,9 +38,9 @@ function uploadFile() {
 }
 function gores(){
 	var formData = new FormData();
-	var parpath="../front_end/img/";
+	var parpath="../media/";
 	$.ajax({
-		url: "http://127.0.0.1:8000/imgProcess/createImg",
+		url: "http://"+window.location.host+"/imgProcess/createImg",
 	    type: "post",
 	    data: formData,
 	    dataType: "json",

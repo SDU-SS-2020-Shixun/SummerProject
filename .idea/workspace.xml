@@ -20,9 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="96724627-2fb5-4fa5-a62c-b410acbc2629" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/back_end/imgProcess/sr_model/ocr.py" beforeDir="false" afterPath="$PROJECT_DIR$/back_end/imgProcess/sr_model/ocr.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back_end/back_end/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/back_end/back_end/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back_end/front_end/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/back_end/front_end/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back_end/front_end/js/upload.js" beforeDir="false" afterPath="$PROJECT_DIR$/back_end/front_end/js/upload.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/back_end/imgProcess/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/back_end/imgProcess/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back_end/media/1AEA_1592105240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back_end/media/I1XF_1592321589.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,6 +105,7 @@
       <workItem from="1591952833832" duration="944000" />
       <workItem from="1592301868020" duration="419000" />
       <workItem from="1592302643719" duration="2446000" />
+      <workItem from="1592378098761" duration="302000" />
     </task>
     <servers />
   </component>
