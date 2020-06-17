@@ -19,7 +19,7 @@ def encode(text):
                     raise ValueError('error')
         return k
     for i, c in enumerate(text):
-        print(c,end='|')
+        # print(c,end='|')
         idx = i * gen_config.ALL_CHAR_SET_LEN + char2pos(c)
         vector[idx] = 1.0
     return vector

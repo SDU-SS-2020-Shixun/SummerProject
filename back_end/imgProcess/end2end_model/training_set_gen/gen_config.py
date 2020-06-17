@@ -20,8 +20,14 @@ IMAGE_WIDTH = 160
 # TRAIN_DATASET_PATH = os.getcwd()+os.path.sep+'dataset' + os.path.sep + 'train'
 # TEST_DATASET_PATH = os.getcwd()+os.path.sep+'dataset' + os.path.sep + 'test'
 
-TRAIN_DATASET_PATH = "."+os.path.sep+'dataset' + os.path.sep + 'train'
-TEST_DATASET_PATH = "."+os.path.sep+'dataset' + os.path.sep + 'test'
+# TRAIN_DATASET_PATH = "."+os.path.sep+'dataset' + os.path.sep + 'train'
+# TEST_DATASET_PATH = "."+os.path.sep+'dataset' + os.path.sep + 'test'
+
+
+# 06.17
+TRAIN_DATASET_PATH ='/media/canvolcnao/DATA/GitHubRepos/ds/dataset/train'
+TEST_DATASET_PATH = '/media/canvolcnao/DATA/GitHubRepos/ds/dataset/test'
+
 # PREDICT_DATASET_PATH = CUR_PATH+'img/img_to_predict' # 在生产环境中，配置后端接收的要预测的图片的路径
 PREDICT_DATASET_PATH='../back_end/'+'media'
 

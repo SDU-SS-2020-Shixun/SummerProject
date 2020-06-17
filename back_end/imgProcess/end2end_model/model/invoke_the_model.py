@@ -8,6 +8,7 @@ CUR_PATH = '../back_end/imgProcess'
 sys.path.append('../back_end/imgProcess/')
 import end2end_model.model.my_dataset as my_dataset
 from end2end_model.model.cnn_model_v1 import CNN_v1
+from end2end_model.model.resNet_model import ResNet34
 from tqdm import tqdm
 import numpy as np
 import os
@@ -29,10 +30,14 @@ return: str,图片的4位识别结果
 
 
 def end2end_recognition(image_path):
-    cnn = CNN_v1()
+    # cnn = CNN_v1()
+    # cnn.eval()
+    # cnn.load_state_dict(torch.load(CUR_PATH + '/end2end_model/model.pkl'))
+    # print('加载CNN_V1模型')
+    cnn=ResNet34()
     cnn.eval()
-    cnn.load_state_dict(torch.load(CUR_PATH + '/end2end_model/model.pkl'))
-    print('加载CNN_V1模型')
+    cnn.load_state_dict(torch.load(CUR_PATH + '/end2end_model/resnet_model.pkl'))
+    print('加载ResNet完成')
     predict_dataloader = my_dataset.get_predict_data_loader()
     res = ''
     for i, (images, labels) in tqdm(enumerate(predict_dataloader)):
