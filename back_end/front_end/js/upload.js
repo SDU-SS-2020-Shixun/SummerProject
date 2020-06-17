@@ -2,7 +2,7 @@ var fil;
 function uploadFile() {
 	var formData = new FormData();
 	fil = document.getElementById('file').files[0];
-	formData.append("img", file);
+	formData.append("img", fil);
 	$.ajax({
 	    url: "http://127.0.0.1:8000/imgProcess/upload",
 	    type: "post",
@@ -103,4 +103,5 @@ window.onload = function(){
 		 }
      }
  }
+
 

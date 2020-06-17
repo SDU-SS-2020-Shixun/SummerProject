@@ -1,5 +1,9 @@
 ## 后端接口文档
 
+访问前端网页路径
+
+ip:host/imgProcess/index
+
 1. /imgProcess/upload
 
 接口描述：利用post请求该接口，上传用户验证码图片，返回验证码结果
