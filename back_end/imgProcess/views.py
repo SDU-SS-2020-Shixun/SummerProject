@@ -24,6 +24,7 @@ import time
 
 from end2end_model.model import invoke_the_model
 from end2end_model.training_set_gen import gen_for_user
+from end2end_model.imageProcess import toGrayscale
 from sr_model import ocr
 
 # 设置导包路径
@@ -92,6 +93,7 @@ def del_file(filepath):
 def saveImg(img):
     imgName = img.name
     img = Image.open(img)
+    img=img.resize((160,60),Image.ANTIALIAS)
     # 获取文件名
     name = os.path.splitext(imgName)[0]
     # imgName = name + "_" + str(time.time()) + ".png" 
@@ -99,4 +101,10 @@ def saveImg(img):
     imgName = '0000_' + str(time.time()) + ".png"
     imgPath = "media/" + imgName
     img.save(imgPath)
+
+    # imgRes=toGrayscale.get_grayscale_image(imgPath)
+    # img=Image.fromarray(imgRes)
+    # img.save(imgPath)
+
+    
     return imgPath

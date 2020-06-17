@@ -39,6 +39,7 @@ function uploadFile() {
 function gores(){
 	var formData = new FormData();
 	var parpath="../media/";
+	console.log(window.location.host);
 	$.ajax({
 		url: "http://"+window.location.host+"/imgProcess/createImg",
 	    type: "post",
