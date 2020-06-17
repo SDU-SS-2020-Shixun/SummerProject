@@ -1,5 +1,14 @@
 var fil;
+var cnt=0;
 function uploadFile() {
+	if(cnt==1){
+		cnt=(cnt+1)%2;
+		$(".fake").css("display","block");
+		$("#tix").css("display","block");
+		$("#hxian").css("display","none");
+		$("#submitl").text("开始上传");
+		return;
+	}
 	var formData = new FormData();
 	fil = document.getElementById('file').files[0];
 	formData.append("img", fil);
@@ -35,6 +44,9 @@ function uploadFile() {
 			$("#submitl").removeClass("notclick");
 		}
 	});
+	$("#submitl").text("再次上传");
+	cnt=(cnt+1)%2;
+	// alert(cnt);
 }
 function gores(){
 	var formData = new FormData();
