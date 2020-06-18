@@ -22,7 +22,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '1&5e0l6egtjspp_%sujr!%pvz)lceal=0mpt61lvwzu(vgin4v'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["*"]
 
@@ -141,9 +141,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
+STATIC_ROOT = 'front_end'
 STATIC_URL = '/front_end/'
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'front_end')
+STATIC_DIRS = [
+    os.path.join(BASE_DIR, '/front_end/')
 ]
 
 # Django用户上传的都叫media文件

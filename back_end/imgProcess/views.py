@@ -63,8 +63,7 @@ def createImg(request):
     # 根据路径获取到图片文件名，前端根据文件名进行展示
     imgFile = imgPath.split("/")[-1]
     imgCode1 = invoke_the_model.end2end_recognition("")
-    # imgCode1 = "ggha"
-    imgCode2 = ocr.captcha_predict("media/"+imgFile)
+    imgCode2 = invoke_the_model.end2end_recognition_gy("")
     result = {
         "code": 200,
         "img": imgFile,

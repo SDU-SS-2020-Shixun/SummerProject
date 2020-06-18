@@ -34,10 +34,34 @@ def end2end_recognition(image_path):
     # cnn.eval()
     # cnn.load_state_dict(torch.load(CUR_PATH + '/end2end_model/model.pkl'))
     # print('加载CNN_V1模型')
-    cnn=ResNet34()
+    cnn = ResNet34()
     cnn.eval()
-    cnn.load_state_dict(torch.load(CUR_PATH + '/end2end_model/resnet_model.pkl'))
+    cnn.load_state_dict(torch.load(CUR_PATH + '/end2end_model/resnet_model.pkl', map_location=torch.device("cpu")))
     print('加载ResNet完成')
+    predict_dataloader = my_dataset.get_predict_data_loader()
+    res = ''
+    for i, (images, labels) in tqdm(enumerate(predict_dataloader)):
+        image = images
+        vimage = Variable(image)
+        predict_label = cnn(vimage)
+
+        c0 = gen_config.ALL_CHAR_SET[np.argmax(predict_label[0, 0:gen_config.ALL_CHAR_SET_LEN].data.numpy())]
+        c1 = gen_config.ALL_CHAR_SET[
+            np.argmax(predict_label[0, gen_config.ALL_CHAR_SET_LEN:2 * gen_config.ALL_CHAR_SET_LEN].data.numpy())]
+        c2 = gen_config.ALL_CHAR_SET[
+            np.argmax(predict_label[0, 2 * gen_config.ALL_CHAR_SET_LEN:3 * gen_config.ALL_CHAR_SET_LEN].data.numpy())]
+        c3 = gen_config.ALL_CHAR_SET[
+            np.argmax(predict_label[0, 3 * gen_config.ALL_CHAR_SET_LEN:4 * gen_config.ALL_CHAR_SET_LEN].data.numpy())]
+        predict_label = '%s%s%s%s' % (c0, c1, c2, c3)
+        res = predict_label
+    return res
+
+
+def end2end_recognition_gy(image_path):
+    cnn = CNN_v1()
+    cnn.eval()
+    cnn.load_state_dict(torch.load(CUR_PATH + '/end2end_model/model.pkl', map_location=torch.device("cpu")))
+    print('加载CNN_V1模型')
     predict_dataloader = my_dataset.get_predict_data_loader()
     res = ''
     for i, (images, labels) in tqdm(enumerate(predict_dataloader)):
