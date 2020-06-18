@@ -52,20 +52,3 @@ function rightchange() {
 	$("#planal").css("opacity", "1");
 	$("#planbl").css("opacity", "1");
 }
-function changetip() {
-	// var fileInput = document.getElementById('file');
-	// var tip = document.getElementById('tip');
-	// tip.innerHTML = fileInput.value;
-	var fr = new FileReader();
-	var myFile = document.getElementById('file');
-	var fil = myFile.files[0];
-	fr.readAsDataURL(fil);
-	fr.onload=function(e){
-		// console.log(this.result);
-		$("#hxian").css("display","block");
-		$("#hximg").attr("src",e.target.result);
-		$(".fake").css("display","none");
-		$("#tix").css("display","none");
-		// $("#hxian").css("background-image","url(this.result)");
-	}
-}

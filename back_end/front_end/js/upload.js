@@ -10,7 +10,7 @@ function uploadFile() {
 		return;
 	}
 	var formData = new FormData();
-	fil = document.getElementById('file').files[0];
+	// fil = document.getElementById('file').files[0];
 	formData.append("img", fil);
 	$.ajax({
 		url: "http://"+window.location.host+"/imgProcess/upload",
@@ -115,6 +115,23 @@ window.onload = function(){
 		 	// $("#hxian").css("background-image","url(this.result)");
 		 }
      }
+ }
+ function changetip() {
+ 	// var fileInput = document.getElementById('file');
+ 	// var tip = document.getElementById('tip');
+ 	// tip.innerHTML = fileInput.value;
+ 	var fr = new FileReader();
+ 	var myFile = document.getElementById('file');
+ 	fil = myFile.files[0];
+ 	fr.readAsDataURL(fil);
+ 	fr.onload=function(e){
+ 		// console.log(this.result);
+ 		$("#hxian").css("display","block");
+ 		$("#hximg").attr("src",e.target.result);
+ 		$(".fake").css("display","none");
+ 		$("#tix").css("display","none");
+ 		// $("#hxian").css("background-image","url(this.result)");
+ 	}
  }
 
 
