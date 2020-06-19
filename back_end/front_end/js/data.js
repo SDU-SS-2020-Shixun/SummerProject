@@ -1,5 +1,5 @@
 // 柱状图模块1
-(function() {
+(function () {
 	// 1实例化对象
 	var myChart = echarts.init(document.querySelector("#usage"));
 	// 2. 指定配置项和数据
@@ -47,6 +47,6 @@
 	myChart.setOption(option);
 	// 4. 让图表跟随屏幕自动的去适应
 	//window.addEventListener("resize", function() {
-	 // myChart.resize();
+	// myChart.resize();
 	//});
-  })();
+})();

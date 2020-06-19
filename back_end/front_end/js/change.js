@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
 	$("#shadowl").addClass("notclick");
 	$("#submitl").addClass("notclick");
 	$("#shadowr").addClass("notclick");

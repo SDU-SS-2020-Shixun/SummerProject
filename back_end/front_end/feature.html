@@ -1,79 +1,100 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<link href="./css/style.css" rel="stylesheet" />
-		<title>暑期实训验证码识别</title>
-		<link rel="icon" href="img/logo.ico" type="images/x-ico" />
-		<script src="./js/echarts.min.js"></script>
-		<script src="./js/data.js"></script>
-		<script src="./js/d3.v3.min.js" charset="utf-8"></script> 
-		<style type="text/css">
-			a:link{color:#FAFAD2;}
-			a:visited{color:#40E0D0;}
-			a:hover{color:pink;}
-			a:active{color:#ccc;}
-			#intro1{color: #EEE8AA;
-			font-size: 22px;}
-			.axis path,
-            .axis line{
-        		fill:none;
-        		stroke:black;
-        		shape-rendering:crispEdges;
-				
-				
-    		}
-			#container{
-             background: #34495e;
-             width: 400px;
-             height: 200px;
-            }
-			path{
-            	fill: none;
-            	stroke: aquamarine;
-            	stroke-width: 2;
-			}
-			button{
-	          background-color:#f66f6a;
-	          color:white;
-	          width: 200px;
-	          height: 45px;
-	          border:0;
-	          font-size: 16px;
-	          box-sizing: content-box;				
-			  border-radius: 5px;
-            }
-           button:hover{
-	           background-color: #a54b4a;
-            }
-		</style>
-		
-	</head>
-	<body>
-		<div id="bak">
-			<div id="cn-title1">暑期实训-验证码识别 / 功能介绍</div>
-			<div id="en-title1">VERIFICATION CODE RECOGNITION / FEATURE</div>
-			<div id="two_block">
-				<div id="in_two_left">
-					  <p id="intro1">
-						&nbsp; &nbsp; 全自动区分计算机和人类的公开图灵测试（CAPTCHA），俗称验证码，是一种区分用户是计算机或人的公共全自动程序。详情见
-						<a href="https://zh.wikipedia.org/wiki/%E9%AA%8C%E8%AF%81%E7%A0%81" target="_blank">wiki</a>
-						。这里有一个例子<br><br>
-						<img src="img/example.png">
-					  </p>
-					  <p id="intro1">
-						&nbsp; &nbsp; 调查显示人们花费在识别验证码的时间是这样的。
-					  </p>
-					  <div id="usage" style="width: 300px;height:200px;"></div>
-					  <script type="text/javascript">
-						// 基于准备好的dom，初始化echarts实例
-						var myChart = echarts.init(document.getElementById('usage'));
-				 
-						// 指定图表的配置项和数据
-						var option = {
-							title: {
-								text: '平均消除验证码时间(s)'
-							},
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="./css/style.css" rel="stylesheet" />
+	<title>暑期实训验证码识别</title>
+	<link rel="icon" href="img/logo.ico" type="images/x-ico" />
+	<script src="./js/echarts.min.js"></script>
+	<script src="./js/data.js"></script>
+	<script src="./js/d3.v3.min.js" charset="utf-8"></script>
+	<style type="text/css">
+		a:link {
+			color: #FAFAD2;
+		}
+
+		a:visited {
+			color: #40E0D0;
+		}
+
+		a:hover {
+			color: pink;
+		}
+
+		a:active {
+			color: #ccc;
+		}
+
+		#intro1 {
+			color: #EEE8AA;
+			font-size: 22px;
+		}
+
+		.axis path,
+		.axis line {
+			fill: none;
+			stroke: black;
+			shape-rendering: crispEdges;
+
+
+		}
+
+		#container {
+			background: #34495e;
+			width: 400px;
+			height: 200px;
+		}
+
+		path {
+			fill: none;
+			stroke: aquamarine;
+			stroke-width: 2;
+		}
+
+		button {
+			background-color: #f66f6a;
+			color: white;
+			width: 200px;
+			height: 45px;
+			border: 0;
+			font-size: 16px;
+			box-sizing: content-box;
+			border-radius: 5px;
+		}
+
+		button:hover {
+			background-color: #a54b4a;
+		}
+	</style>
+
+</head>
+
+<body>
+	<div id="bak">
+		<div id="cn-title1">暑期实训-验证码识别 / 功能介绍</div>
+		<div id="en-title1">VERIFICATION CODE RECOGNITION / FEATURE</div>
+		<div id="two_block">
+			<div id="in_two_left">
+				<p id="intro1">
+					&nbsp; &nbsp; 全自动区分计算机和人类的公开图灵测试（CAPTCHA），俗称验证码，是一种区分用户是计算机或人的公共全自动程序。详情见
+					<a href="https://zh.wikipedia.org/wiki/%E9%AA%8C%E8%AF%81%E7%A0%81" target="_blank">wiki</a>
+					。这里有一个例子<br><br>
+					<img src="img/example.png">
+				</p>
+				<p id="intro1">
+					&nbsp; &nbsp; 调查显示人们花费在识别验证码的时间是这样的。
+				</p>
+				<div id="usage" style="width: 300px;height:200px;"></div>
+				<script type="text/javascript">
+					// 基于准备好的dom，初始化echarts实例
+					var myChart = echarts.init(document.getElementById('usage'));
+
+					// 指定图表的配置项和数据
+					var option = {
+						title: {
+							text: '平均消除验证码时间(s)'
+						},
 						color: ['#3398DB'],
 						tooltip: {
 							trigger: 'axis',
@@ -110,80 +131,85 @@
 							}
 						]
 					};
-				 
-						// 使用刚指定的配置项和数据显示图表。
-						myChart.setOption(option);
-					</script>
 
-					
-				</div>
-				<div id="in_two_right">
-					<p id="intro1">
-						&nbsp; &nbsp; 本网站通过深度学习的方式识别验证码和光学字符识别两种方式识别，请仅用于学习用途。您可以在
-						<a href="https://github.com/SDU-SS-2020-Shixun/SummerProject" target="_blank">Github</a>上查看项目。
-						阅读
-						<a href="mianze.htm" target="_blank">免责声明</a>
-						。下表为最近一个半月“验证码”的谷歌趋势
-					  </p>
-					  <div id="container"></div>
-					  <script>
-						  var width=400;
-    var height=200;
-    var margin = { top: 30, right: 20, bottom: 20, left: 50 },
-        g_width = width - margin.left - margin.right,
-        g_height = height - margin.top - margin.bottom;
-    //以上代码的意思是：定义变量来表示画布的宽度，给g设置了偏移量，然后准确的求出g的高度和宽度。
-    d3.select("#container")
-    .append("svg")
-    .attr("width",width)
-    .attr("height",height)
+					// 使用刚指定的配置项和数据显示图表。
+					myChart.setOption(option);
+				</script>
 
-    var g=d3.select("svg")//实际存在的
-    .append("g")
-    .attr("transform","translate(50,30)")
 
-    var data=[40,77,45,59,53,37]
-
-    var scale_x= d3.scale//X轴等比例放大函数
-      .linear()
-      .domain([0,data.length-1])
-      .range([0,g_width]);
-
-    var scale_y= d3.scale//Y轴等比例放大函数
-        .linear()
-        .domain([0,d3.max(data)])//d3.max（）获取数据的最大值
-        .range([0,g_height]);
-    
-    var line_generator=d3.svg.line()
-    .x(function(d,i){return scale_x(i)})
-    .y(function(d){return scale_y(d)})
-    .interpolate("cardinal");
-
-    d3.select("g")
-    .append("path")
-    .attr("d",line_generator(data));
-
-					  </script>
-					  
-					  <p id="intro1">
-						&nbsp; &nbsp; 欧码云平台的上传验证码识别完全免费，用户既可以上传识别，也可以由系统自动生成之。
-					  </p>
-					  <p id="intro1">
-						&nbsp; &nbsp; 根据
-						<a href="https://www.nvidia.cn/docs/IO/123003/CUDA_contest_Captcha_problem.pdf" target="_blank">论文</a>
-						，在中等难度的CAPTCHA 字符集上，
-						<a href="https://zh.wikipedia.org/wiki/%E6%94%AF%E6%8C%81%E5%90%91%E9%87%8F%E6%9C%BA" target="_blank">SVM</a>
-						能够实现9%的识别率，而
-						<a href="https://numenta.com/assets/pdf/whitepapers/hierarchical-temporal-memory-cortical-learning-algorithm-0.2.1-en.pdf" target="_blank">HTM</a>能够做到20%，所以识别过程中出现错误是很正常的。
-					  </p>
-					  <p id="intro1">
-						&nbsp; &nbsp; 希望您在发现验证码错误时，能把正确的结果输入进去，这对我们改善模型有帮助。
-					  </p>
-					  
-				</div>
-				<div id="startone"></div>
-				<button style="display:inline-block;float:right;height:20px;margin-top:10px;" onclick="javascrtpt:window.location.href='index.html'">返回</button>
 			</div>
+			<div id="in_two_right">
+				<p id="intro1">
+					&nbsp; &nbsp; 本网站通过深度学习的方式识别验证码和光学字符识别两种方式识别，请仅用于学习用途。您可以在
+					<a href="https://github.com/SDU-SS-2020-Shixun/SummerProject" target="_blank">Github</a>上查看项目。
+					阅读
+					<a href="mianze.htm" target="_blank">免责声明</a>
+					。下表为最近一个半月“验证码”的谷歌趋势
+				</p>
+				<div id="container"></div>
+				<script>
+					var width = 400;
+					var height = 200;
+					var margin = { top: 30, right: 20, bottom: 20, left: 50 },
+						g_width = width - margin.left - margin.right,
+						g_height = height - margin.top - margin.bottom;
+					//以上代码的意思是：定义变量来表示画布的宽度，给g设置了偏移量，然后准确的求出g的高度和宽度。
+					d3.select("#container")
+						.append("svg")
+						.attr("width", width)
+						.attr("height", height)
+
+					var g = d3.select("svg")//实际存在的
+						.append("g")
+						.attr("transform", "translate(50,30)")
+
+					var data = [40, 77, 45, 59, 53, 37]
+
+					var scale_x = d3.scale//X轴等比例放大函数
+						.linear()
+						.domain([0, data.length - 1])
+						.range([0, g_width]);
+
+					var scale_y = d3.scale//Y轴等比例放大函数
+						.linear()
+						.domain([0, d3.max(data)])//d3.max（）获取数据的最大值
+						.range([0, g_height]);
+
+					var line_generator = d3.svg.line()
+						.x(function (d, i) { return scale_x(i) })
+						.y(function (d) { return scale_y(d) })
+						.interpolate("cardinal");
+
+					d3.select("g")
+						.append("path")
+						.attr("d", line_generator(data));
+
+				</script>
+
+				<p id="intro1">
+					&nbsp; &nbsp; 欧码云平台的上传验证码识别完全免费，用户既可以上传识别，也可以由系统自动生成之。
+				</p>
+				<p id="intro1">
+					&nbsp; &nbsp; 根据
+					<a href="https://www.nvidia.cn/docs/IO/123003/CUDA_contest_Captcha_problem.pdf"
+						target="_blank">论文</a>
+					，在中等难度的CAPTCHA 字符集上，
+					<a href="https://zh.wikipedia.org/wiki/%E6%94%AF%E6%8C%81%E5%90%91%E9%87%8F%E6%9C%BA"
+						target="_blank">SVM</a>
+					能够实现9%的识别率，而
+					<a href="https://numenta.com/assets/pdf/whitepapers/hierarchical-temporal-memory-cortical-learning-algorithm-0.2.1-en.pdf"
+						target="_blank">HTM</a>能够做到20%，所以识别过程中出现错误是很正常的。
+				</p>
+				<p id="intro1">
+					&nbsp; &nbsp; 希望您在发现验证码错误时，能把正确的结果输入进去，这对我们改善模型有帮助。
+				</p>
+
+			</div>
+			<div id="startone"></div>
+			<button style="display:inline-block;float:right;height:20px;margin-top:10px;"
+				onclick="javascrtpt:window.location.href='index.html'">返回</button>
 		</div>
-	</body>
+	</div>
+</body>
+
 </html>

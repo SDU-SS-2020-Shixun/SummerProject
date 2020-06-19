@@ -1,82 +1,86 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<link href="../front_end/css/style.css" rel="stylesheet" />
-		<title>暑期实训验证码识别</title>
-		<link rel="icon" href="../front_end/img/logo.ico" type="images/x-ico" />
-		<script src="../front_end/js/jquery.js"></script>
-		<script src="../front_end/js/change.js"></script>
-		<script src="../front_end/js/upload.js"></script>
-		<style type="text/css">
-		   button{
-	         background-color:#f66f6a;
-	         color:white;
-	         width: 200px;
-	         height: 45px;
-	         border:0;
-	         font-size: 16px;
-	         box-sizing: content-box;				
-			 border-radius: 5px;
-           }
-           button:hover{
-	           background-color: #a54b4a;
-           }
-		
-		</style>
-	</head>
-	<body>
-		<div id="bak">
-			<div id="cn-title">
-				暑期实训-验证码识别
-			</div>
-			<div id="en-title">VERIFICATION CODE RECOGNITION</div>
-			<div id="two_block">
-				<div id="in_two_left">
-					<div id="left_title">自主上传</div>
-					<button id="left_btn" onclick="leftchange()">CLICK HERE</button>
-					
-					<form id="form" method="post" enctype="multipart/form-data">
-					    <div class="shadow" id="shadowl">
-					        <div class="dot">
-					            <div class="fake">点击选择验证码图片
-					                <input type="file" id="file" name="file" class="file-input" onchange="changetip()"/>
-					            </div>
-								<div id="tix">或拖拽图片到此区域</div>
-					            <!-- <h2 id="tip" class="tip">未选择</h2> -->
-					        </div>
-					    </div>
-					    <button class="submit" id="submitl" onclick="uploadFile()" type="button">开始上传</button>
-					</form>
-					<div id="hxian" align="center">
-						<img src="../front_end/img/yzm.png" id="hximg" height="37%">
-					</div>
-					<div id="planal">PLAN 1:</div>
-					<div id="resal">xxxx</div>
-					<div id="planbl">PLAN 2:</div>
-					<div id="resbl">xxxx</div>
-				</div>
-				<div id="in_two_right">
-					<div id="right_title">在线生成</div>
-					
-					<button id="right_btn" onclick="rightchange()">CLICK HERE</button>
-				
-					<div class="shadow" id="shadowr">
-					    <div class="dot">
-							<img src="../front_end/img/loading.gif" id="resimg">
-					    </div>
-					</div>
-					<button class="submit" id="submitr" onclick="gores()">生成识别</button>
-					
-					<div id="planar">PLAN 1:</div>
-					<div id="resar">xxxx</div>
-					<div id="planbr">PLAN 2:</div>
-					<div id="resbr">xxxx</div>
-				</div>
-				
-				<div id="startone"></div>
-				<button style="display:inline-block;float:right;height:20px;margin-top:10px;" onclick="javascrtpt:window.location.href='feature.html'">功能介绍</button>
-			</div>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../front_end/css/style.css" rel="stylesheet" />
+	<title>暑期实训验证码识别</title>
+	<link rel="icon" href="../front_end/img/logo.ico" type="images/x-ico" />
+	<script src="../front_end/js/jquery.js"></script>
+	<script src="../front_end/js/change.js"></script>
+	<script src="../front_end/js/upload.js"></script>
+	<style type="text/css">
+		button {
+			background-color: #f66f6a;
+			color: white;
+			width: 200px;
+			height: 45px;
+			border: 0;
+			font-size: 16px;
+			box-sizing: content-box;
+			border-radius: 5px;
+		}
+
+		button:hover {
+			background-color: #a54b4a;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="bak">
+		<div id="cn-title">
+			暑期实训-验证码识别
 		</div>
-	</body>
+		<div id="en-title">VERIFICATION CODE RECOGNITION</div>
+		<div id="two_block">
+			<div id="in_two_left">
+				<div id="left_title">自主上传</div>
+				<button id="left_btn" onclick="leftchange()">CLICK HERE</button>
+
+				<form id="form" method="post" enctype="multipart/form-data">
+					<div class="shadow" id="shadowl">
+						<div class="dot">
+							<div class="fake">点击选择验证码图片
+								<input type="file" id="file" name="file" class="file-input" onchange="changetip()" />
+							</div>
+							<div id="tix">或拖拽图片到此区域</div>
+							<!-- <h2 id="tip" class="tip">未选择</h2> -->
+						</div>
+					</div>
+					<button class="submit" id="submitl" onclick="uploadFile()" type="button">开始上传</button>
+				</form>
+				<div id="hxian" align="center">
+					<img src="../front_end/img/yzm.png" id="hximg" height="37%">
+				</div>
+				<div id="planal">PLAN 1:</div>
+				<div id="resal">xxxx</div>
+				<div id="planbl">PLAN 2:</div>
+				<div id="resbl">xxxx</div>
+			</div>
+			<div id="in_two_right">
+				<div id="right_title">在线生成</div>
+
+				<button id="right_btn" onclick="rightchange()">CLICK HERE</button>
+
+				<div class="shadow" id="shadowr">
+					<div class="dot">
+						<img src="../front_end/img/loading.gif" id="resimg">
+					</div>
+				</div>
+				<button class="submit" id="submitr" onclick="gores()">生成识别</button>
+
+				<div id="planar">PLAN 1:</div>
+				<div id="resar">xxxx</div>
+				<div id="planbr">PLAN 2:</div>
+				<div id="resbr">xxxx</div>
+			</div>
+
+			<div id="startone"></div>
+			<button style="display:inline-block;float:right;height:20px;margin-top:10px;"
+				onclick="javascrtpt:window.location.href='feature.html'">功能介绍</button>
+		</div>
+	</div>
+</body>
+
 </html>
