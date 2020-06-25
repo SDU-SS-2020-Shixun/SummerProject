@@ -62,6 +62,36 @@ ip:host/imgProcess/index
 
 ![binaryTree](./READMEIMG/createImgResult.jpg "binaryTree")
 
+3. /imgProcess/downloadImg
+
+接口描述：请求该接口，传入图片的url，返回该图片的识别结果
+
+请求方式：GET
+
+请求参数：[
+
+    "imgUrl": 图片的路径
+
+]
+
+返回参数：[
+
+    "code": 200
+
+    "img": 图片的文件名，图片在media文件夹下
+    
+    "imgCode1": 验证码结果，灿哲的结果
+    
+    "imgCode2": 验证码结果，郭奕的结果
+    
+]
+
+
+返回示例：
+
+![binaryTree](./READMEIMG/downloadImg.png "binaryTree")
+
+
 ## 后端目录
 
 1. imgProcess 下的 end2end_model 是端到端的识别模型

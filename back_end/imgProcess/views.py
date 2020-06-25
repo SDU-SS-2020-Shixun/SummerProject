@@ -5,6 +5,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.conf import settings
 from django.shortcuts import render
+import urllib.request
 
 import sys
 import os
@@ -27,11 +28,13 @@ from end2end_model.training_set_gen import gen_for_user
 from end2end_model.imageProcess import toGrayscale
 from sr_model import ocr
 
+
 # 设置导包路径
 # sys.path.append('../back_end/imgProcess')
 
 def index(request):
     return render(request, "front_end/index.html")
+
 
 def upload(request):
     if request.method == 'POST':
@@ -73,6 +76,28 @@ def createImg(request):
     return HttpResponse(json.dumps(result))
 
 
+def downloadImg(request):
+    del_file('media/')
+    imgUrl = request.GET.get("imgUrl")
+    print(imgUrl)
+    filePath = os.getcwd()
+    print(filePath)
+    savePath = os.path.join(filePath, 'media/')
+    print(savePath)
+    imgName = r"{0}0000_{1}.png".format(savePath, str(int(time.time())))
+    urllib.request.urlretrieve(imgUrl, imgName)
+    name = imgName.split("/")[-1]
+    imgCode1 = invoke_the_model.end2end_recognition("")
+    imgCode2 = ocr.captcha_predict("media/" + name)
+    result = {
+        "code": 200,
+        "img": name,
+        "imgCode1": imgCode1,
+        "imgCode2": imgCode2
+    }
+    return HttpResponse(json.dumps(result))
+
+
 def del_file(filepath):
     """
     删除某一目录下的所有文件或文件夹
@@ -92,7 +117,7 @@ def del_file(filepath):
 def saveImg(img):
     imgName = img.name
     img = Image.open(img)
-    img=img.resize((160,60),Image.ANTIALIAS)
+    img = img.resize((160, 60), Image.ANTIALIAS)
     # 获取文件名
     name = os.path.splitext(imgName)[0]
     # imgName = name + "_" + str(time.time()) + ".png" 
@@ -105,5 +130,4 @@ def saveImg(img):
     # img=Image.fromarray(imgRes)
     # img.save(imgPath)
 
-    
     return imgPath
