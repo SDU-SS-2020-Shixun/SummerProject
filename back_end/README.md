@@ -11,7 +11,7 @@ ip:host/imgProcess/index
 请求参数：[
 
     "img": 用户上传的图片
-    
+
 ]
 
 返回参数：[
@@ -77,13 +77,13 @@ ip:host/imgProcess/index
 返回参数：[
 
     "code": 200
-
+    
     "img": 图片的文件名，图片在media文件夹下
     
     "imgCode1": 验证码结果，灿哲的结果
     
     "imgCode2": 验证码结果，郭奕的结果
-    
+
 ]
 
 
@@ -91,6 +91,19 @@ ip:host/imgProcess/index
 
 ![binaryTree](./READMEIMG/downloadImg.png "binaryTree")
 
+4. /imgProcess/createNNImg
+
+   接口描述： 在请求每个返回图片的接口的同时，请求该接口，返回生成神经网络的图片
+
+   请求参数：无
+
+   返回参数：[
+
+       "code": 200
+       
+       "img": 图片的文件名，图片在media文件夹下
+
+   ]
 
 ## 后端目录
 
