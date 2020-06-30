@@ -56,6 +56,52 @@ def to_Conv( name, s_filer=256, n_filer=64, offset="(0,0,0)", to="(0,0,0)", widt
     };
 """
 
+# 定义一个在某块之下的块
+def to_Under1():
+    return r"""
+    \pic[shift={(0,-8,0)}] at (conv6-west) {Box={name=downsample1,%
+            xlabel={{"D1","dummy"}},fill=\ConvColor,%
+            height=15,width=2,depth=15}};
+"""
+
+def to_Under2():
+    return r"""
+    \pic[shift={(0,-9,0)}] at (conv10-west) {Box={name=downsample2,%
+            xlabel={{"D2","dummy"}},fill=\ConvColor,%
+            height=15,width=2,depth=15}};
+"""
+def to_Under3():
+    return r"""
+    \pic[shift={(0,-10,0)}] at (conv14-west) {Box={name=downsample3,%
+            xlabel={{"D3","dummy"}},fill=\ConvColor,%
+            height=15,width=2,depth=15}};
+"""
+
+#定义线-块-线之间的连接
+def to_connect1():
+    return r"""
+    \path (conv4-east) -- (conv5-west) coordinate[pos=0.5] (between4_5) ;
+    \path (conv6-east) -- (conv7-west) coordinate[pos=0.5] (between6_7) ;
+    \draw [connection]  (between4_5)    -- node {\midarrow} (downsample1-west-|between4_5) -- node {\midarrow} (downsample1-west);
+    \draw [connection]  (downsample1-east) -- node {\midarrow} (downsample1-east -| between6_7) -- node {\midarrow} (between6_7);
+"""
+
+def to_connect2():
+    return r"""
+    \path (conv8-east) -- (conv9-west) coordinate[pos=0.5] (between8_9) ;
+    \path (conv10-east) -- (conv11-west) coordinate[pos=0.5] (between10_11) ;
+    \draw [connection]  (between8_9)    -- node {\midarrow} (downsample2-west-|between8_9) -- node {\midarrow} (downsample2-west);
+    \draw [connection]  (downsample2-east) -- node {\midarrow} (downsample2-east -| between10_11) -- node {\midarrow} (between10_11);
+"""
+
+def to_connect3():
+    return r"""
+    \path (conv12-east) -- (conv13-west) coordinate[pos=0.125] (between12_13) ;
+    \path (conv14-east) -- (conv15-west) coordinate[pos=0.5] (between14_15) ;
+    \draw [connection]  (between12_13)    -- node {\midarrow} (downsample3-west-|between12_13) -- node {\midarrow} (downsample3-west);
+    \draw [connection]  (downsample3-east) -- node {\midarrow} (downsample3-east -| between14_15) -- node {\midarrow} (between14_15);
+"""
+
 # Conv,Conv,relu
 # Bottleneck
 def to_ConvConvRelu( name, s_filer=256, n_filer=(64,64), offset="(0,0,0)", to="(0,0,0)", width=(2,2), height=40, depth=40, caption=" " ):
@@ -192,6 +238,4 @@ def to_generate( arch, pathname="file.tex" ):
         for c in arch:
             print(c)
             f.write( c )
-     
-
-
+            
