@@ -66,6 +66,10 @@
 		button:hover {
 			background-color: #a54b4a;
 		}
+		.usage img {
+            width: 390px;
+			height: 260px;
+		}
 	</style>
 
 </head>
@@ -83,58 +87,12 @@
 					<img src="img/example.png">
 				</p>
 				<p id="intro1">
-					&nbsp; &nbsp; 调查显示人们花费在识别验证码的时间是这样的。
+					&nbsp; &nbsp; 本网络使用ResNet结构，其可视化展示如下图
 				</p>
-				<div id="usage" style="width: 300px;height:200px;"></div>
-				<script type="text/javascript">
-					// 基于准备好的dom，初始化echarts实例
-					var myChart = echarts.init(document.getElementById('usage'));
-
-					// 指定图表的配置项和数据
-					var option = {
-						title: {
-							text: '平均消除验证码时间(s)'
-						},
-						color: ['#3398DB'],
-						tooltip: {
-							trigger: 'axis',
-							axisPointer: {            // 坐标轴指示器，坐标轴触发有效
-								type: 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
-							}
-						},
-						grid: {
-							left: '3%',
-							right: '4%',
-							bottom: '3%',
-							containLabel: true
-						},
-						xAxis: [
-							{
-								type: 'category',
-								data: ['每天上网', '每周上网', '每月上网'],
-								axisTick: {
-									alignWithLabel: true
-								}
-							}
-						],
-						yAxis: [
-							{
-								type: 'value'
-							}
-						],
-						series: [
-							{
-								name: '直接访问',
-								type: 'bar',
-								barWidth: '60%',
-								data: [8.3, 12.7, 10.5]
-							}
-						]
-					};
-
-					// 使用刚指定的配置项和数据显示图表。
-					myChart.setOption(option);
-				</script>
+				<div class="usage" style="width: 300px;height:200px;">
+				     <img src="img/net.png">
+				</div>
+				
 
 
 			</div>
@@ -187,7 +145,7 @@
 				</script>
 
 				<p id="intro1">
-					&nbsp; &nbsp; 欧码云平台的上传验证码识别完全免费，用户既可以上传识别，也可以由系统自动生成之。
+					&nbsp; &nbsp; 本网站的上传验证码识别完全免费，用户既可以上传识别，也可以由系统自动生成之。
 				</p>
 				<p id="intro1">
 					&nbsp; &nbsp; 根据
