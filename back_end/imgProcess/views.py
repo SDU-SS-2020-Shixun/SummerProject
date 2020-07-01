@@ -27,7 +27,6 @@ from end2end_model.model import invoke_the_model
 from end2end_model.training_set_gen import gen_for_user
 from end2end_model.imageProcess import toGrayscale
 from sr_model import ocr
-from plotnn.pyexamples import test_simple 
 
 # 设置导包路径
 # sys.path.append('../back_end/imgProcess')
@@ -35,6 +34,8 @@ from plotnn.pyexamples import test_simple
 def index(request):
     return render(request, "front_end/index.html")
 
+def feature(request):
+    return render(request, "front_end/feature.html")
 
 def upload(request):
     if request.method == 'POST':
